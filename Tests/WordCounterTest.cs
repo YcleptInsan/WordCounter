@@ -7,14 +7,14 @@ namespace WordCounter
     [Fact]
     public void RepeatCounter_GatherInput_equalTo()
     {
-      // //Arrange
-      // string _input1 = "french";
-      //
-      // // Act
-      // CountRepeats newRepeatCounter = new CountRepeats();
-      //
-      // //Assert
-      // Assert.Equal("french", newRepeatCounter.GetRepeatTrue(input1));
+      //Arrange
+      string input1 = "french";
+
+      // Act
+      CountRepeats newCountRepeats = new CountRepeats();
+
+      //Assert
+      Assert.Equal(true , newCountRepeats.GetRepeatTrue(input1));
     }
   }
 }

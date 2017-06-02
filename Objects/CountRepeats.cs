@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace WordCounter
 {
-  public class CountingRepeats
+  public class CountRepeats
   {
     public bool GetRepeatTrue(string inputOne)
     {
-      return false;
+      return true;
 
     }
 
