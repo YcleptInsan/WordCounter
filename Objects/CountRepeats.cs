@@ -5,11 +5,16 @@ namespace WordCounter
 {
   public class CountRepeats
   {
-    public bool GetRepeatTrue(string inputOne)
+    public string GetRepeatTrue(string input1, string input2)
     {
-      return true;
-
+      if(input1 == input2)
+      {
+        return input1;
+      }
+      else
+      {
+        return "not a match";
+      }
     }
-
   }
 }
