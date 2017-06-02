@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace WordCounter
 {
-  public class CountRepeats
+  public class RepeatCounter
   {
     private string _input1;
     private string _input2;
-    private string _result;
+    private int _count;
 
-    public CountRepeatsInput(string input1, string input2)
+    public RepeatCounter(string input1, string input2)
     {
       _input1 = input1;
       _input2 = input2;
@@ -18,46 +19,36 @@ namespace WordCounter
     {
       return _input1;
     }
-    public void SetInput1(string input1)
-    {
-      _input1 = input1;
-    }
+
     public string GetInput2()
     {
       return _input2;
     }
-    public void SetInput2(string input2)
+    public int splitInput2()
     {
-      _input2 = input2;
+      string[] input2Array = _input2.Split();
+      return input2Array.Length;
     }
-    public string GetResult()
+    public int CountRepeats()
     {
-      return _result;
-    }
-    public void SetResult(string result)
-    {
-      _result = result;
-    }
-    public CountRepeats(string input1, string input2)
-    {
+      //Converts inputs to lowercase
+      string input1 = _input1.ToLower();
+      input1 = input1.Replace("!", "").Replace(".", "").Replace(",", "").Replace("?", "");
+      string input2 = _input2.ToLower();
+      input2 = input2.Replace("!", "").Replace(".", "").Replace(",", "").Replace("?", "");
+      //Counting through the new Array
 
-    }
-    //CONVERTS INPUT FROM FORM 2 INTO a list of string in an array separated by whitespace.
-    public string CompareStringArray(string input1, string input2)
-    {
-      input1 = input1.ToLower();
-      input2 = input2.ToLower();
-      List<string> newList = new List<string>();
-      string[] StringArray = input2.Split(' ');
-      foreach(string word in StringArray){
-        newList.Add(word);
-      }
-      if (newList.Contains(input1))
+       _count = 0;
+      string[] input2Array = input2.Split();
+
+      for(int i = 0; i < input2Array.Length; i++)
+      {
+        if(input1 == input2Array[i])
         {
-            Console.WriteLine("3.5 " + newList[0]);
-            Console.WriteLine("match");
+         _count ++;
         }
-      return "result";
+      }
+      return _count;
     }
   }
 }
