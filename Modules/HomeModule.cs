@@ -14,7 +14,7 @@ namespace WordCounter
         string input2 = Request.Form["user_input_form_2"];
 
         RepeatCounter newResult = new RepeatCounter(input1, input2);
-         int result = newResult.CountRepeats();
+        int result = newResult.CountRepeats();
         return View["output.cshtml", result];
       };
     }

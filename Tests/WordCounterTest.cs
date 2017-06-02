@@ -12,7 +12,7 @@
 //     //   string input1 = "french";
 //     //
 //     //   // Act
-//     //   CountRepeats newCountRepeats = new CountRepeats();
+//     //   RepeatCounter newCountRepeats = new RepeatCounter();
 //     //
 //     //   //Assert
 //     //   Assert.Equal(true , newCountRepeats.GetRepeatTrue(input1));
