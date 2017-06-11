@@ -19,7 +19,7 @@ This web application will take one word as user input and compare it to a string
 
 ## Setup/Installation Requirements
 
-Go to Github repository page at (insert link here)
+Go to Github repository page at https://github.com/YcleptInsan/WordCounter
 Click the "download or clone" button and copy the link.
 In your computers terminal type "git clone" & paste the copied link.
 Once downloaded you can open the index.html file in the browser of your choice.
@@ -40,6 +40,7 @@ If you have any issues or have questions, ideas, concerns, or contributions plea
 * JSON
 * C#
 * Nancy
+* Xunit
 * Razor
 
 ### License
