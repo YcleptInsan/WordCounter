@@ -25,11 +25,7 @@ namespace WordCounter
     {
       return _input2;
     } //Input 2 array Split
-    // public int arrayInput2()
-    // {
-    //   string[] input2Array = _input2.Split();
-    //   return input2Array.Length;
-    // }
+  
     public int CountRepeats()
     {
       //Converts inputs to lowercase
