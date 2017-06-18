@@ -6,7 +6,7 @@ namespace WordCounter
   public class RepeatCounterTest
   {
     [Fact]
-    public void RepeatCounterTest1_GatherInputs_equalTo()
+    public void RepeatCounter_Test1_GatherInputs_equalTo()
     {
       //Arrange
       string input1 = "french";
@@ -20,28 +20,19 @@ namespace WordCounter
     }
 
 		[Fact]
-    public void RepeatCounterTest2_GatherInputs_CompairToString()
+    public void RepeatCounter_Test2_SplitInput2Sentence_returnArrayLength()
     {
-      //Arrange
-      string input1 = "french";
-      List<string> input2 = new List<string>();
-      input2.Add("jenny");
-      input2.Add("was");
-      input2.Add("just");
-      input2.Add("about");
-      input2.Add("french");
+      RepeatCounter newCountRepeats = new RepeatCounter("I", "I am who I am");
 
-      foreach (string match in input2)
-      {
-        if (match == input1)
-        {
-          System.Console.WriteLine("match");
-        }
-        else
-        {
-          System.Console.WriteLine("not quite");
-        }
-			}
-		}
+      //Assert
+      Assert.Equal(2,  newCountRepeats.CountRepeats());
+    }
+    [Fact]
+    public void RepeatCounter_Test3_SplitInput2Sentence_ReturnWordCount()
+    {
+      RepeatCounter newCountRepeats = new RepeatCounter("I", "I am who I say I am");
+
+      Assert.Equal(3,  newCountRepeats.CountRepeats());
+    }
   }
 }

@@ -14,6 +14,7 @@ namespace WordCounter
     {
       _input1 = input1;
       _input2 = input2;
+      _count = 0;
     }
     public string GetInput1()
     {
@@ -23,12 +24,12 @@ namespace WordCounter
     public string GetInput2()
     {
       return _input2;
-    }
-    public int splitInput2()
-    {
-      string[] input2Array = _input2.Split();
-      return input2Array.Length;
-    }
+    } //Input 2 array Split
+    // public int arrayInput2()
+    // {
+    //   string[] input2Array = _input2.Split();
+    //   return input2Array.Length;
+    // }
     public int CountRepeats()
     {
       //Converts inputs to lowercase
@@ -38,7 +39,6 @@ namespace WordCounter
       input2 = input2.Replace("!", "").Replace(".", "").Replace(",", "").Replace("?", "");
       //Counting through the new Array
 
-       _count = 0;
       string[] input2Array = input2.Split();
 
       for(int i = 0; i < input2Array.Length; i++)
